@@ -25,21 +25,24 @@ $("#no-records").keyup(function(){
 
 
 $("#search-btn").click(function(){
-    console.log("search clicked");
-    // var userSearch
-    var queryURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userSearch +"?begin_date=" + searchBeginDate + "?end_date=" + searchEndDate + "&api-key=c4c014934b1b40228ced8b92f50576ce";
-    // i=0;
+    if (userSearch != ""){
+        $("#top-articles").empty();
+        console.log("search clicked");
+        // var userSearch
+        var queryURL = "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + userSearch +"?begin_date=" + searchBeginDate + "?end_date=" + searchEndDate + "&api-key=c4c014934b1b40228ced8b92f50576ce";
+        // i=0;
     
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response){
-        console.log(queryURL);
-        for (i=0; i<recordTotal; i++){
-            var blah = ("<div class='border m-3'><p class = 'font-weight-bold'>" + response.response.docs[i].headline.main + "</p><p>" + response.response.docs[0].byline.original + "</p><p>" + response.response.docs[i].pub_date + "</p><p>" + response.response.docs[i].web_url + "</p></div>");
-            $("#top-articles").append(blah);      
-        };
-    });
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response){
+            console.log(queryURL);
+            for (i=0; i<recordTotal; i++){
+                var blah = ("<div class='border m-3'><p class = 'font-weight-bold'>" + response.response.docs[i].headline.main + "</p><p>" + response.response.docs[0].byline.original + "</p><p>" + response.response.docs[i].pub_date + "</p><p>" + response.response.docs[i].web_url + "</p></div>");
+                $("#top-articles").append(blah);      
+            };
+        });
+    } 
 });
 
      
