@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <title>NY Times Search</title>
+</head>
+<body>
+                <!-- MAIN HEADER -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4" style="text-align: center;">NY Times Article Search</h1>
+        </div>
+    </div>
+
+                <!-- ARTICLE SEARCH -->
+    <div class="container" id="search-cont">
+        <div class="card-header">
+            Search Parameters
+        </div>
+        <form id="main-search">
+            <div class="form-group" id="search-term">
+                <label for="formGroupExampleInput">Search Term:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="search-term">
+            </div>
+            <div class="form-group" id="no-records">
+                <label for="formGroupExampleInput2">Number of Records to Retrieve:</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="no-records">
+            </div>
+            <div class="form-group" id="start-year">
+                <label for="formGroupExampleInput">Start Year (optional):</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="start-year">
+            </div>
+            <div class="form-group" id="end-year">
+                <label for="formGroupExampleInput2">End Year (optional):</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="end-year">
+            </div>
+        </form>
+        <label for="">search-btn</label>
+        <a id="search-btn" href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Search</a>
+        <label for="">clear-results</label>
+        <a id="clear-results" href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Clear Results</a>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+              Top Articles
+            </div>
+        <div id="top-articles">
+            top-articles
+        </div>
+        </div>    
+    </div>
+
+
+</body>
+</html>
